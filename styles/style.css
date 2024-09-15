@@ -54,8 +54,22 @@
 }
 
 .header__link {
+  position: relative;
   color: #2f80ed;
   text-decoration: none;
+}
+
+.header__link::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%);
+  transition: all .2s;
+}
+
+.header__link:hover::after {
+  right: -30px;
 }
 
 .header__main-illustration {
@@ -268,6 +282,20 @@
   font-weight: normal;
   color: #2f80ed;
   text-decoration: none;
+  transform: translateX(-20px);
+}
+
+.feynman__link::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: -45px;
+  transform: translateY(-50%);
+  transition: all .2s;
+}
+
+.feynman__link:hover::after {
+  right: -55px;
 }
 
 .kaufman {
@@ -300,4 +328,90 @@
   z-index: 0;
   height: 877px;
   width: 877px;
+}
+
+.footer {
+  background-color: #1f1f1f;
+  padding: 60px 40px;
+}
+
+.footer__columns {
+  width: 90%;
+  min-height: 250px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.footer__column_content_copyright {
+  flex-basis: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__author {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
+  color: #fff;
+  margin: 18px 0;
+}
+
+.footer__column-heading {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 20px 0;
+}
+
+.footer__column-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.footer__column-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer__column-link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1.5px;
+  width: 0;
+  background-color: #fff;
+  transition: all .2s;
+}
+
+.footer__column-link:hover:after {
+  width: 100%;
+}
+
+.footer__column-link_content_social:after {
+  left: 26px;
+}
+
+.footer__column-link_content_social:hover:after {
+  width: calc(100% - 26px);
+}
+
+.footer__column-link:last-of-type {
+  margin-bottom: 0;
+}
+
+.footer__social-icon {
+  margin-right: 10px;
 }
