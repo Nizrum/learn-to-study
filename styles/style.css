@@ -1,3 +1,13 @@
+@keyframes rotation {
+    from {
+        transform: rotate(0);
+    }
+    
+    to {
+        transform: rotate(360deg)
+    }
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -21,6 +31,10 @@
   margin-bottom: 100px;
 }
 
+.rotation {
+    animation: rotation 20s infinite linear;
+}
+
 .header {
   position: relative;
   display: flex;
@@ -29,6 +43,7 @@
   min-height: 600px;
   max-height: 756px;
   background-color: #f2f2f2;
+  overflow: hidden;
 }
 
 .header__title {
@@ -57,6 +72,7 @@
   position: relative;
   color: #2f80ed;
   text-decoration: none;
+  transition: all .2s;
 }
 
 .header__link::after {
@@ -66,6 +82,10 @@
   right: -25px;
   transform: translateY(-50%);
   transition: all .2s;
+}
+
+.header__link:hover {
+    opacity: 0.6;
 }
 
 .header__link:hover::after {
@@ -280,6 +300,7 @@
   color: #2f80ed;
   text-decoration: none;
   transform: translateX(-20px);
+  transition: all .2s;
 }
 
 .feynman__link::after {
@@ -290,6 +311,10 @@
   transform: translateY(-50%);
   transition: all .2s;
 }
+
+.feynman__link:hover {
+    opacity: 0.6;
+  }
 
 .feynman__link:hover::after {
   right: -55px;
@@ -379,21 +404,11 @@
   color: #fff;
   text-decoration: none;
   margin-bottom: 10px;
-}
-
-.footer__column-link:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 1.5px;
-  width: 0;
-  background-color: #fff;
   transition: all .2s;
 }
 
-.footer__column-link:hover:after {
-  width: 100%;
+.footer__column-link:hover {
+    opacity: 0.6;
 }
 
 .footer__column-link_content_social:after {
