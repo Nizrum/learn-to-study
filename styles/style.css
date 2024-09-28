@@ -411,6 +411,92 @@
   right: -55px;
 }
 
+.khan {
+  padding-top: 105px;
+  background-color: #f2f2f2;
+}
+
+.khan__container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.khan__author {
+  font-size: 30px;
+  line-height: 42px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.khan__title {
+  font-size: 60px;
+  line-height: 1.15;
+  font-weight: 600;
+  margin: 0 0 50px;
+}
+
+.khan__quote {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: normal;
+  width: 790px;
+  margin: 0 0 36px;
+}
+
+.khan__quote-author {
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.khan__quote-author-subline {
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: normal;
+  margin: 0 0 68px 0;
+}
+
+.khan__book-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+  object-fit: cover;
+  object-position: 0 0;
+  margin-right: 48px;
+}
+
+.khan__buy-link {
+  position: relative;
+  font-size: 30px;
+  line-height: 42px;
+  font-weight: normal;
+  color: #2f80ed;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.khan__buy-link::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+  transition: all 0.2s;
+}
+
+.khan__buy-link:hover {
+  opacity: 0.6;
+}
+
+.khan__buy-link:hover::after {
+  right: -50px;
+}
+
 .kaufman {
   position: relative;
   background-color: #1f1f1f;
